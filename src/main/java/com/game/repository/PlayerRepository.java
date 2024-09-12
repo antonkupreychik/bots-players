@@ -1,8 +1,8 @@
 package com.game.repository;
 
-import com.game.entity.Player;
-import com.game.entity.Profession;
-import com.game.entity.Race;
+import com.game.model.entity.Player;
+import com.game.model.enums.Profession;
+import com.game.model.enums.Race;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.PagingAndSortingRepository;

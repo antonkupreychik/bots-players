@@ -24,6 +24,16 @@ CREATE TABLE player
     ENGINE = InnoDB
     DEFAULT CHARACTER SET = utf8;
 
+CREATE TABLE bots
+(
+    id    BIGINT(20)  NOT NULL AUTO_INCREMENT,
+    name  VARCHAR(12) NULL,
+    email VARCHAR(30) NULL,
+    PRIMARY KEY (id)
+)
+    ENGINE = InnoDB
+    DEFAULT CHARACTER SET = utf8;
+
 INSERT INTO player(name, title, race, profession, birthday, banned, experience, level, untilNextLevel)
 VALUES ('Ниус', 'Приходящий Без Шума', 'HOBBIT', 'ROGUE', '2010-10-12', false, 58347, 33, 1153)
      , ('Никрашш', 'НайтВульф', 'ORC', 'WARLOCK', '2010-02-14', false, 174403, 58, 2597)

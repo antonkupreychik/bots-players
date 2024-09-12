@@ -1,4 +1,4 @@
-package com.game.entity;
+package com.game.model.enums;
 
 public enum Race {
     HUMAN,

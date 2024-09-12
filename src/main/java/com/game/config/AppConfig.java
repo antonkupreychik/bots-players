@@ -29,15 +29,15 @@ public class AppConfig {
 
     @Bean
     public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
-        LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
-        em.setDataSource(dataSource());
-        em.setPackagesToScan("com.game.entity");
+        LocalContainerEntityManagerFactoryBean managerFactoryBean = new LocalContainerEntityManagerFactoryBean();
+        managerFactoryBean.setDataSource(dataSource());
+        managerFactoryBean.setPackagesToScan("com.game.model.entity");
 
         JpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
-        em.setJpaVendorAdapter(vendorAdapter);
-        em.setJpaProperties(additionalProperties());
+        managerFactoryBean.setJpaVendorAdapter(vendorAdapter);
+        managerFactoryBean.setJpaProperties(additionalProperties());
 
-        return em;
+        return managerFactoryBean;
     }
 
     @Profile("prod")
@@ -54,7 +54,6 @@ public class AppConfig {
     @Profile("dev")
     @Bean(name = "dataSource")
     public DataSource dataSourceForTests() {
-
         return new EmbeddedDatabaseBuilder()
                 .generateUniqueName(true)
                 .setType(H2)

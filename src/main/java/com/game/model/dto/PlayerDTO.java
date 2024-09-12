@@ -1,9 +1,9 @@
-package com.game.controller;
+package com.game.model.dto;
 
-import com.game.entity.Profession;
-import com.game.entity.Race;
+import com.game.model.enums.Profession;
+import com.game.model.enums.Race;
 
-public class PlayerInfo {
+public class PlayerDTO {
     public Long id;
     public String name;
     public String title;
